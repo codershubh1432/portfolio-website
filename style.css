@@ -771,4 +771,27 @@ position:relative;
   }
 }
 
+/* show hamburger and make sidebar slide in/out on small screens */
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+    transition: left 0.3s ease;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* when sidebar is open, push content slightly */
+  .main-content.shifted {
+    padding-left: 270px;
+  }
+}
+
+
 
